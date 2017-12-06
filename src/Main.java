@@ -34,7 +34,7 @@ public class Main {
 	        resultList.add(filteredElement);
 	    }
         
-	    printResults(expectedList, resultList);
+	    printResults(testList, expectedList, resultList);
 	   
 	   
 	    //Test String array for bad string
@@ -52,7 +52,7 @@ public class Main {
 	        resultList.add(filteredElement);
 	    }
         
-	    printResults(expectedList, resultList);
+	    printResults(testList, expectedList, resultList);
 	    
 	   
 	    //Test Integer List for large integer
@@ -71,7 +71,7 @@ public class Main {
 	        resultIntegerList.add(filteredElement);
 	    }
         
-	    printResults(expectedIntegerList, resultIntegerList);
+	    printResults(testIntegerList, expectedIntegerList, resultIntegerList);
 	   
 	   
 		//Test Integer List for large integer
@@ -89,17 +89,18 @@ public class Main {
 	        resultIntegerList.add(filteredElement);
 	    }
         
-	    printResults(expectedIntegerList, resultIntegerList);
+	    printResults(testIntegerList, expectedIntegerList, resultIntegerList);
    
 	   
         System.out.println("Testing Filtering Iterator Framework Complete.");	         
         
     }
 
-    private <E> void printResults(List<E> expectedList, List<E> resultList){
+    private <E> void printResults(List<E> testList, List<E> expectedList, List<E> resultList){
         String testResult= isListsEqual(expectedList, resultList) ? "Test Passed" : "Test Failed";
         System.out.println(testResult);
 
+        System.out.println("Test     List: " +  listToString(testList));
         System.out.println("Expected List: " +  listToString(expectedList));
         System.out.println("Result   List: " +  listToString(resultList));
         System.out.println("");
@@ -122,7 +123,7 @@ public class Main {
     private <E> String listToString(List<E> list){
         StringBuffer sb = new StringBuffer();
         for(E element : list){
-            sb.append(element.toString());
+            sb.append((element == null ? "null" : element.toString()));
             sb.append(" ");
         }
         
