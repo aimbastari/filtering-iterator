@@ -98,11 +98,11 @@ public class Main {
 
     private <E> void printResults(List<E> expectedList, List<E> resultList){
         String testResult= isListsEqual(expectedList, resultList) ? "Test Passed" : "Test Failed";
-	    System.out.println(testResult);
+        System.out.println(testResult);
 
         System.out.println("Expected List: " +  listToString(expectedList));
         System.out.println("Result   List: " +  listToString(resultList));
- 	    System.out.println("");
+        System.out.println("");
        
     }
 
