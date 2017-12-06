@@ -1,4 +1,4 @@
-# filtering-iterator
+Running java Main.class produces the following output:  
 
 # Testing Filtering Iterator Framework.
    
