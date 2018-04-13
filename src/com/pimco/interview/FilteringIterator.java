@@ -6,6 +6,7 @@ import java.util.Iterator;
  * Takes an iterator and skips elements that do not meet the test
  * provided by the IObjectTest inteface.
  * 
+ * author: Alex Imbastari
  */
 public class FilteringIterator<E> implements Iterator<E>{
     
